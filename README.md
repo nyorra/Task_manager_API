@@ -25,5 +25,13 @@ TaskManager API — это backend-сервис для управления за
 
 ## Запуск проекта
 1. Клонировать репозиторий:
-```bash
-git clone <https://github.com/nyorra/Task_manager_API.git>
+    ```bash
+    git clone <https://github.com/nyorra/Task_manager_API.git>
+   
+2. Установить зависимости:
+   ```bash 
+   pip install -r requirements.txt
+   
+3. Запуск сервера FastAPI:
+    ```bash
+    uvicorn main:app --reload
