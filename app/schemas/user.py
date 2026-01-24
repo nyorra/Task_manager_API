@@ -16,8 +16,3 @@ class UserUpdate(BaseModel):
     title: str
     description: str
     user_id: int
-
-class UserDelete(BaseModel):
-    title: str
-    description: str
-    user_id: int

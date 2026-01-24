@@ -19,8 +19,3 @@ class TaskUpdate(BaseModel):
     title: str
     description: str
     user_id: int
-
-class TaskDelete(BaseModel):
-    title: str
-    description: str
-    user_id: int
