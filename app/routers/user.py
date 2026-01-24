@@ -12,7 +12,7 @@ router = APIRouter(prefix="/users", tags=["Users"])
 def create_user(user: UserCreate, db: Session = Depends(get_db)):
     db_user = db.query(User).filter(User.email == user.email).first()
     if db_user:
-        raise HTTPException(status_code=400, detail="Email already exist")
+        raise HTTPException(status_code=400, detail="Email already exists")
 
     new_user = User(**user.model_dump())
     db.add(new_user)

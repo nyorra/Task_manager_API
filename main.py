@@ -8,16 +8,18 @@ Base.metadata.create_all(bind=engine)
 app = FastAPI(title="Task Manager API")
 
 app.include_router(user.router)
-print("User router included successfully.")
+print("User router success")
 
-app.include_router(task.router)
-print("Task router included successfully.")
+app.include_router(task .router)
+print("Task router success")
 
+@app.get("/")
+def get_home():
+    return {"data": "Test message"}
 
 @app.get("/greetings")
 def get_home():
-    return "Hi bro"
-
+    return {"data": "Hi bro"}
 
 @app.get("/all-endpoints")
 def list_endpoints():
@@ -31,7 +33,7 @@ def list_endpoints():
             })
     return JSONResponse(content=endpoints)
 
-
+# Печать всех эндпоинтов при старте
 print("Registered endpoints:")
 for route in app.routes:
     if hasattr(route, "methods"):

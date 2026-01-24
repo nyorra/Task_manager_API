@@ -1,4 +1,4 @@
-from pydantic import BaseSettings
+from pydantic_settings import BaseSettings
 
 class Settings(BaseSettings):
     DB_NAME: str
@@ -13,5 +13,10 @@ class Settings(BaseSettings):
 
     class Config:
         env_file = ".env"
+        env_file_encoding = "utf-8"
+        case_sensitive = True
 
 settings = Settings()
+print("DB_NAME:", settings.DB_NAME)
+print("DB_USER:", settings.DB_USER)
+print("DB_HOST:", settings.DB_HOST)
