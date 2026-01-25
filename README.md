@@ -13,7 +13,6 @@ TaskManager API — это backend-сервис для управления за
 - **SQLAlchemy** — ORM для работы с PostgreSQL
 - **Pydantic** — схемы для валидации и сериализации данных
 - **PostgreSQL** — реляционная база данных
-- **Redis** — кэширование часто запрашиваемых данных
 - **Docker** — контейнеризация сервиса
 - **Git** — контроль версий и управление репозиторием
 
@@ -35,3 +34,12 @@ TaskManager API — это backend-сервис для управления за
 3. Запуск сервера FastAPI:
     ```bash
     uvicorn main:app --reload
+
+4. Запуск Docker сервера:  
+   **Убедись, что у тебя установлен [Docker](https://www.docker.com/ )**
+
+   Запуск всех сервисов:
+   
+   ```bash
+   docker compose up
+   ```
