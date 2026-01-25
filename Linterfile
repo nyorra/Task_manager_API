@@ -1,0 +1,5 @@
+# Локальные линтеры для чистки проекта
+lint:
+	@echo "🧹 Запускаем линтеры локально..."
+	uv run ruff check --fix app
+	uv run ruff format app
